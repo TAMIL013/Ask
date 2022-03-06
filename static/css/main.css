@@ -1,0 +1,34 @@
+body{
+    margin:0 auto;
+    /* padding-bottom: 10px; */
+}
+
+.top_root_container{
+    position:sticky;
+    width: 100%;
+    top: 0px;
+    margin:0 auto;
+    background-color: #fff;
+    box-shadow:0 0.01em 1em rgb(102, 102, 102);
+}
+.bottom_root_container{
+
+    width: 100%;
+    display: flex;
+    
+}
+.left_container{
+    flex: 15%;
+    
+}
+.middle_container{
+    flex: 60%;
+    /* background-color: #f1f2f2; */
+}
+.right_container{
+    flex: 25%;
+    /* background-color: #f1f2f2; */
+    /* height: 100vh; */
+    
+   
+}

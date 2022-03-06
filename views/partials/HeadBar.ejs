@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="/static/css/head.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="head_container">
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <div class="searchbar">
+            <form action="">
+                <input type="text" id="searchID" placeholder="Search..">
+            </form>
+        </div>
+        <div class="auth " id="auth">
+            
+            <!-- <a href="/auth/login"><button class="btn_auth btn_outline" >Log in</button></a> -->
+        </div>
+    </div>
+    <%if(Valid_Loggedin){%>
+        <script>
+            document.getElementById("auth").innerHTML=`
+            <a href="/auth/logout"><button class="btn_auth btn_outline" >Log out</button></a>`
+        </script>
+    <%} else {%>
+        <script>
+            document.getElementById("auth").innerHTML=`
+            <a href="/auth/login"><button class="btn_auth btn_outline" >Log in</button></a>`
+        </script>
+    <%}%>    
+</body>
+</html>

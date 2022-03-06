@@ -1,0 +1,60 @@
+body{
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(/static/images/question_mark.svg);
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position:99% 10%;
+    
+}
+
+.AskQ_root_container{
+    margin-top:1%;
+    /* width: 100%; */
+   
+    /* padding-left: 2%;
+    padding-right: 2%;  */
+    /* background-color: #fff; */
+}
+
+.AskQ_root_container div{
+    /* text-align: center; */
+    margin-right: 2%;
+}
+#Q_title{
+
+    height: 2rem;
+    margin-bottom: 2rem;
+}
+#Q_Descript{
+ 
+    resize:none ;
+    margin-bottom: 1rem;
+    height: 16rem;
+
+}
+#Q_tags{
+    margin-bottom: 0px;
+}
+.input_style_extend_createQ{
+    width:100%;
+    background-color: #fff;
+}
+.input_style_extend_createQ_2{
+    width: 100%;
+    background-color: #fff;
+    flex: 1;
+    margin-right: -2%;
+    
+}
+.tag_search_result{
+    margin-top: 0.1em;
+    display: none;
+    flex-wrap: wrap;
+}
+.input_tag_container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}

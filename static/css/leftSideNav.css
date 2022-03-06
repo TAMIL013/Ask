@@ -1,0 +1,38 @@
+.leftSideNavBar{
+    height:93vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid hsla(213, 7%, 76%,1);
+    position:sticky;
+    top: 3rem;
+    overflow-y: auto;
+}
+
+
+.left_nav_btn_outline{
+    /* margin:2rem 2rem; */
+    /* width: 100%; */
+    padding: 0.5em 0.5em;
+   font-size: medium;
+   
+   text-decoration: none;
+   text-align: left;
+   cursor: pointer;
+
+   border:none;
+   background-color:#fff;
+   color: hsl(210, 8%, 75%);
+}
+.left_nav_active{
+    /* background-color:hsla(140, 40%, 55%,.5); */
+    border-bottom:2px solid  hsla(195, 53%, 79%,1);
+    border-left:1rem solid  hsla(195, 53%, 79%,1);
+    font-weight: bold;
+    color: hsl(210, 8%, 5%);
+}
+.left_nav_btn_outline:hover:not(.left_nav_active){
+    background-color: hsla(195, 53%, 79%,.2);
+    border-bottom:2px solid  hsla(195, 53%, 79%,.3);
+    border-left:1rem solid  hsla(195, 53%, 79%,.3);
+    color: hsl(210, 8%, 35%);
+}

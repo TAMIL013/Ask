@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/css/createQ.css">
+</head>
+<body>
+    
+    <div class="AskQ_root_container">
+        <h2>Ask a public question</h2>
+        <div id="addQuestionForm" >
+            <label for="Q_title"><h4>Title</h4></label>
+            <div>
+                <input type="text" class="input_style input_style_extend_createQ" name="Q_title" id="Q_title">
+            </div>
+            <label for="Q_Descript"><h4>Description</h4></label>
+            <div>
+                <textarea name="Q_Descript"class="input_style input_style_extend_createQ"  id="Q_Descript" rows="20"></textarea>
+            </div>
+            <label for="Q_tags"><h4>Tags</h4></label>
+            <div class="input_tag_container" id="input_tag_container">
+                
+                <input type="text" class="input_style input_style_extend_createQ_2"  name="Q_tags" id="Q_tags" >
+                
+            </div>
+            <div class="tag_search_result input_style_extend_createQ" id="tag_search_result">
+            </div>
+            
+            <button class="btn" id="btn_add_q" >Add Question</button>
+        </div>
+        <template id="tag_style"> 
+            <button class="tag tag_outline" id="tag" onclick="addTag(this)"> 
+                    <p></p>
+            </button>
+        </template>
+    </div>
+    
+    <script src="/static/js/createQ.js"></script>
+</body>
+</html>

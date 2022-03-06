@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/auth.css">
+   
+</head>
+<body>
+      
+    <div class="auth_main_container">
+        <div class="auth_left_container card_pattern">
+            <div class="login_container">
+                <p id="p_head_left"> Welcome Back!</p>
+                <p id="span_sub_left">To keep connected with us please login with your personal info</p>
+                <a href="/auth/login"> <button class="btn_outline btn_extend_left btn_slide_effect" >SIGN IN</button></a>
+            </div>
+            <div class="box_pattern">
+                <div class="shape_lg"></div>
+                <div class="shape_lg"></div>
+                <div class="shape_lg"></div>
+                
+            </div>
+            <div class="box_pattern">
+                <div class="shape_md"></div>
+                <div class="shape_md"></div>
+                <div class="shape_md"></div>
+                <div class="shape_md"></div>
+            </div>
+            <div class="box_pattern">
+                <div class="shape_sm"></div>
+                <div class="shape_sm"></div>
+                <div class="shape_sm"></div>
+                <div class="shape_sm"></div>
+                <div class="shape_sm"></div>
+            </div>
+        </div>
+        <div class="auth_right_container" style="flex: 4;">
+            <div class="register_form_container">
+                <form action="/auth/register" method="post">
+                    <p id="p_head">Create Account</p>
+                    <p id="span_sub"><span >or use your email for registration</span>  </p>
+                    <div >
+                        <p id="server_side_error_container" class="auth_error"></p>
+                    </div>
+                    <input class="input_style" type="text"id="UserName" name="UserName" placeholder="Name" value="<%=details.UserName%>" >
+                    <input class="input_style" type="email"id="Email" name="Email" placeholder="Email" value="<%=details.Email%>">
+                    <input class="input_style" type="password"id="Password" name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" 
+                    value="<%=details.Password%>">
+                     
+                        <div class="password_message" id="password_message">  Must contain at least 
+                            <span id="uppercase" class="invalid">one uppercase letter</span> and 
+                            <span id="lowercase" class="invalid">one lowercase letter</span> and
+                            <span id="number" class="invalid">one number</span>,and at least 
+                            <span id="length" class="invalid">8 or more characters</span>
+                            
+                        </div>
+                    
+                    <input class="input_style" type="password" id="retypePassword" name="retypePassword" placeholder="Retype a password" value="<%=details.retypePassword%>">
+                    <div class="invalid" id="retype_password_message" style="display: none;">
+                        <span id="retype_password" >Password doesn't match</span>
+                    </div>
+                    <br>
+                    <button id="register_btn" class="btn btn_extend "  type="submit">SIGN UP</button>
+                </form>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    <% if(error!='') {%>
+        <script>
+            document.getElementById("server_side_error_container").innerText="<%=error%>";
+        </script>
+    <%}%>  
+    <script src="../static/js/auth.js"></script>
+</body>
+</html>

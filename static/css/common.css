@@ -1,0 +1,79 @@
+.btn{
+    /* margin:2rem 2rem; */
+    padding: 1em 1em;
+    /* display: inline-block; */
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    background-color: hsl(140, 40%, 55%);
+    color: #fff;
+    border: none;
+}
+.btn_outline{
+     /* margin:2rem 2rem; */
+    padding: 1em 1em ; 
+    /* display: inline-block; */
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    color: hsl(140,40%,55%);
+    border:1px solid hsl(140,40%,55%);
+    background-color: #fff;
+}
+
+/* INPUT FIELDS */
+
+.input_style{
+    height: 2.5rem;
+    width: 50%;
+    padding-left: 1rem;
+    margin-bottom: 0.75em;
+    /* border: 0.2em solid hsl(0,0%,90%); */
+    background-color: hsl(0,0%,90%);
+    color: hsl(140,40%,55%);
+    border: none;
+    outline:0.1rem solid hsl(0,0%,90%);
+    /* transition-delay: 1s; */
+    transition: 0.5s;
+}
+.input_style:focus{
+    color: hsl(140,40%,55%);
+    outline:0.1rem solid hsl(140,40%,55%);
+   
+}
+.input_style::placeholder{
+    color: hsl(0,0%,75%,0.75);
+    padding-left: 1rem;
+}
+.input_style:focus::placeholder {
+    color: hsl(140,40%,55%);
+  }
+
+.tag{
+    border: none;
+    border-radius: 0.5em;
+    display: block;
+    padding: 0.5em;
+    margin: 0.5em;
+    margin-left: 0em;
+    margin-right: 1em;
+    background-color:hsla(140, 40%, 55%,.3);
+    color: hsl(140, 40%, 35%);
+}
+.tag p{
+    margin: 0px;
+    padding: 0px;
+
+}
+.tag_outline{
+    background-color: transparent;
+    color: hsl(140, 40%, 35%);
+    border:0.1rem solid hsla(140, 40%, 35%,1);
+}
+
+/* LEFT SIDE CONTAINER */
+
+.body{
+    background-color: hsl(140, 40%, 55%);
+}
+

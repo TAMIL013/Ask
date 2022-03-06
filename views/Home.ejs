@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+</head>
+
+<body>
+    <div class="home_container" id="home_container">
+       
+    </div>
+    <template id="question_grid_container_template">
+        <div class="question_grid_container" >
+            <div class="item_flex1">
+                <div class="item_answers "><p>0 answers</p></div>
+                <div class="item_votes "><p>0 votes</p>  </div>
+               
+            </div>
+
+            <div class="item_flex2">
+                <div class="item_question_head">   <p ></p></div>
+                <div class="item_tags">  </div>
+                <div class="item_author"><p  ><span> <i class="fas fa-user-circle"></i></span></p></div>
+            </div>
+         </div>
+
+    </template>
+
+    <template id="tag_card">
+        <button class="tag "  id="tag"> 
+            <p></p>
+        </button>
+    </template>
+    <script src="/static/js/home.js"></script>
+    <!-- <%if(Valid_Loggedin){%>
+        <script>
+            document.getElementById("auth").innerHTML=`
+            <a href="/auth/logout"><button class="btn_auth btn_outline" >Log out</button></a>`
+        </script>
+    <%} else {%>
+        <script>
+            document.getElementById("auth").innerHTML=`
+            <a href="/auth/login"><button class="btn_auth btn_outline" >Log in</button></a>`
+        </script>
+    <%}%>     -->
+</body>
+
+</html>
