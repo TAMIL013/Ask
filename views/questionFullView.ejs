@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/css/fullview.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="full_view">
+        <div class="question_full_view_container" id="question_full_view_container">
+        </div>
+        
+        <div class="answers_container container_style no_shadow_effect" id="answers_container"></div>
+        
+        <%if(Valid_Loggedin){%>
+            <div class="post_your_answer_container container_style no_shadow_effect">
+                <h4>Your Answer</h4>
+                <div >
+                    <textarea name="your_answer" class=" input_style_extend_post_answer no_shadow_effect" id="your_answer"
+                        rows="20" placeholder="Type your answer here..." ></textarea>
+                </div>
+                <button class="btn" id="btn_post_your_answer">Post Your Answer</button>
+            </div>
+        <%} else {%>
+            <div class="redirect_login_page">
+                <p>To post your answer please <a href="/auth/login">Sign in</a></p>
+        
+            </div>
+        <%}%> 
+    
+    </div>
+    
+    <template id="question_grid_container_template">
+        <div class="question_card no_shadow_effect">
+            <div class="question_card_left_flex">
+                <div class="left_flex_child RP"><h4>0%</h4></div>
+                <div class="left_flex_child"><p>Topic</p></div>
+                <div class="left_flex_child"><p>0 Answers</p></div>
+                <div class="left_flex_child hide_child" ></div>
+                 
+            </div>
+            <div class="question_card_right_flex">
+                <div class="right_flex_child grow"><h3>heading </h3></div>
+                <div class="right_flex_child description_style"><p>description </p></div>
+                <div class="right_flex_child right_flex_author"><p>Posted by</p><p>name</p></div>
+    
+            </div>
+            
+        </div>
+    </template>
+    <template id="answer_grid_container_template">
+        <div>
+            <h4></h4>
+        </div>
+
+        <div class="question_card  answer_card_style borderless radiusless">
+            <div class="question_card_left_flex ">
+                <div class="left_flex_child RP radiusless"><h4>0%</h4></div>
+      
+            </div>
+            <div class="question_card_right_flex">
+                <div class="right_flex_child description_style grow"><p>description </p></div>
+                <div class="right_flex_child right_flex_author"><p>Answered by</p><p>name</p></div>
+    
+            </div>
+            
+        </div>
+    </template>
+    <script src="/static/js/fullview.js"></script>
+</body>
+</html>

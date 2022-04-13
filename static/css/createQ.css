@@ -1,6 +1,5 @@
 body{
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-image: url(/static/images/question_mark.svg);
     background-repeat: no-repeat;
     background-size: 10%;
@@ -19,7 +18,7 @@ body{
 
 .AskQ_root_container div{
     /* text-align: center; */
-    margin-right: 2%;
+    /* margin-right: 2%; */
 }
 #Q_title{
 
@@ -37,16 +36,16 @@ body{
     margin-bottom: 0px;
 }
 .input_style_extend_createQ{
-    width:100%;
+    width:100% ;
     background-color: #fff;
 }
-.input_style_extend_createQ_2{
+/* .input_style_extend_createQ_2{
     width: 100%;
     background-color: #fff;
     flex: 1;
     margin-right: -2%;
     
-}
+} */
 .tag_search_result{
     margin-top: 0.1em;
     display: none;
@@ -57,4 +56,45 @@ body{
     width: 100%;
     flex-wrap: wrap;
     
+}
+.Q_tags_dropdown{
+    width: 100%;
+    margin-bottom: 0px;
+    cursor: pointer;
+    /* padding-left: 1rem; */
+    
+    /* color: var(--purple);
+    border: none;
+    outline:0.1rem solid var(--border-gray);
+    /* transition-delay: 1s; */
+    /* transition: 0.5s;  */
+    
+}
+
+.Q_tags_dropdown_content{
+    /* border: none; */
+    border:0.1rem solid var(--purple);
+    border-top: none;
+    padding-left: 1rem;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    cursor: pointer;
+    visibility: visible;
+    /* align-content: space-between; */
+}
+.tag_dropdown_option{
+    /* border:0.1rem solid var(--border-gray); */
+    color: var(--dark-secondary);
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    width:30%;
+    height: auto;
+    word-wrap: break-word;
+    cursor: pointer;
+    /* flex: 1 0 30%; */
+}
+.tag_dropdown_option:hover{
+    color: var(--purple);
 }

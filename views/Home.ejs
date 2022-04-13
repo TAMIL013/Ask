@@ -11,10 +11,56 @@
 </head>
 
 <body>
+    
+    <!-- <div id="question_grid_container_template" >
+        <div class="question_grid_container" >
+            <div class="item_flex1">
+                <div class="item_answers "><p>0 answers</p></div>
+                <div class="item_votes "><p>0 votes</p>  </div>
+               
+            </div>
+
+            <div class="item_flex2">
+                <div class="item_question_head">   <p >title</p></div>
+                <div class="item_tags"> 
+                    <div id="tag_card">
+                        <button class="tag "  id="tag"> 
+                            <p>java</p>
+                        </button>
+                    </div>
+                    <div id="tag_card">
+                        <button class="tag "  id="tag"> 
+                            <p>java</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="item_author"><p  ><span> <i class="fas fa-user-circle"></i></span>tamil</p></div>
+            </div>
+         </div>
+
+    </div> -->
     <div class="home_container" id="home_container">
-       
     </div>
+
     <template id="question_grid_container_template">
+        <div class="question_card">
+            <div class="question_card_left_flex">
+                <div class="left_flex_child RP"><h4>0%</h4></div>
+                <div class="left_flex_child"><p>Topic</p></div>
+                <div class="left_flex_child"><p>0 Answers</p></div>
+                <div class="left_flex_child hide_child" ></div>
+                 
+            </div>
+            <div class="question_card_right_flex">
+                <div class="right_flex_child grow"><p>heading </p></div>
+                <div class="right_flex_child right_flex_author"><p>Posted by</p><p>name</p></div>
+    
+            </div>
+            
+        </div>
+    </template>
+
+    <!-- <template id="question_grid_container_template">
         <div class="question_grid_container" >
             <div class="item_flex1">
                 <div class="item_answers "><p>0 answers</p></div>
@@ -24,7 +70,9 @@
 
             <div class="item_flex2">
                 <div class="item_question_head">   <p ></p></div>
-                <div class="item_tags">  </div>
+                <div class="item_tags"> 
+                   
+                </div>
                 <div class="item_author"><p  ><span> <i class="fas fa-user-circle"></i></span></p></div>
             </div>
          </div>
@@ -35,7 +83,7 @@
         <button class="tag "  id="tag"> 
             <p></p>
         </button>
-    </template>
+    </template> -->
     <script src="/static/js/home.js"></script>
     <!-- <%if(Valid_Loggedin){%>
         <script>

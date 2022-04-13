@@ -45,10 +45,13 @@ app.set('view engine', 'ejs');
 
 const QuestionRouter=require('./routes/questions')
 const AuthRouter=require('./routes/auth')
+const AnswerRouter=require('./routes/answers') 
 const AuthMiddleware=require('./middleware/auth')
 
 app.use('/questions',QuestionRouter)
+app.use('/answers',AnswerRouter)
 app.use('/auth',AuthRouter)
+
 app.get('/',(req,res)=>{
     var Valid_Loggedin=(req.session.isAuth)?true:false;
     res.render('Home',{Valid_Loggedin:Valid_Loggedin});

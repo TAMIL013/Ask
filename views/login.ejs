@@ -19,13 +19,13 @@
        .shape_sm,.shape_md,.shape_lg{
            transform: rotate(-5deg);
        }
-       .card_pattern{
+       /* .card_pattern{
         background-image: linear-gradient(215deg,
-        hsl(140,40%,55%) 75%, #fff);
-       } 
+        var(--purple) 75%, #fff);
+       }  */
     </style>
     <div class="auth_main_container">
-        <div class="auth_left_container" style="flex: 4;margin-top: 6rem;">
+        <div class="auth_left_container content-center" style="flex: 4;">
             <div class="register_form_container">
                 <form action="/auth/login" method="post">
                     <p id="p_head">Sign in to Ask</p>
@@ -45,13 +45,13 @@
             </div>
             
         </div>
-        <div class="auth_right_container card_pattern">
+        <div class="auth_right_container  background_image content-center">
             <div class="login_container">
                 <p id="p_head_left">Hello, Friend!</p>
                 <p id="span_sub_left">Enter your personal details and start journey with us</p>
                 <a href="/auth/register"><button class="btn_outline btn_extend_left btn_slide_effect" >SIGN UP</button></a>
             </div>
-            <div class="box_pattern">
+            <!-- <div class="box_pattern">
                 <div class="shape_lg"></div>
                 <div class="shape_lg"></div>
                 <div class="shape_lg"></div>
@@ -69,7 +69,7 @@
                 <div class="shape_sm"></div>
                 <div class="shape_sm"></div>
                 <div class="shape_sm"></div>
-            </div>
+            </div> -->
         </div>
         
     </div>
