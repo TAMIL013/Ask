@@ -48,10 +48,13 @@ const AuthRouter=require('./routes/auth')
 const AnswerRouter=require('./routes/answers') 
 const AuthMiddleware=require('./middleware/auth')
 
+const djangoRouter=require('./routes/django')
+
 app.use('/questions',QuestionRouter)
 app.use('/answers',AnswerRouter)
 app.use('/auth',AuthRouter)
 
+app.use('/django',djangoRouter)
 app.get('/',(req,res)=>{
     var Valid_Loggedin=(req.session.isAuth)?true:false;
     res.render('Home',{Valid_Loggedin:Valid_Loggedin});

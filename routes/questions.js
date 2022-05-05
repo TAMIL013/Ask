@@ -24,8 +24,11 @@ router.post('/read',async(req,res)=>{
             //GET USER POSTED QUESTIONS ONLY QUERY
                  if(author_data_only)     
                      var questions=await Question.find({author:req.session.UserName}).sort({ $natural: -1 });
-                 else
+                 else{
                      var questions=await Question.find().sort({ $natural: -1 });
+                    //  var questions=await Question.find().sort({ $natural: -1 });
+
+                 }
          
                  // console.log(author_data_only)
                  
@@ -95,7 +98,7 @@ router.get('/view/:id',async(req,res)=>{
     const question_id=req.params.id;    
     // console.log(question_id);
     var Valid_Loggedin=(req.session.isAuth)?true:false;
-    console.log("/view")
+    // console.log("/view")
     res.render('questionFullView',{layout:'../views/layouts/CreateQuestionLayout',Valid_Loggedin:Valid_Loggedin,question_id:question_id})
     
 })

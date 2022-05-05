@@ -17,6 +17,16 @@ var questionSchema=new mongoose.Schema({
         type:String,
         required:true,
         default:"Unknown"
+    },
+    total_answers:{
+        type:Number,
+        required:true,
+        default:0
+    },
+    most_relevance_percentage:{
+        type:Number,
+        required:true,
+        default:0,
     }
 })
 

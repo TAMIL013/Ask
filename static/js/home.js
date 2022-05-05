@@ -12,7 +12,13 @@ function loadQuestions(result) {
         const left_flex= question_card.children[0];
         const right_flex= question_card.children[1];
 
+        left_flex.children[0].children[0].textContent=question.most_relevance_percentage+"%";
         left_flex.children[1].children[0].textContent=question.tags[0].name;
+
+        if(question.total_answers > 1)
+            left_flex.children[2].children[0].textContent=question.total_answers+" Answers";
+        else
+            left_flex.children[2].children[0].textContent=question.total_answers+" Answer";
 
         right_flex.children[0].children[0].textContent=question.title;
         right_flex.children[1].children[1].textContent=question.author;

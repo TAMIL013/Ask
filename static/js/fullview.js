@@ -48,13 +48,14 @@ function loadAnswers(answers){
         const left_flex=answer_card.children[0];
         const right_flex= answer_card.children[1];
 
+        left_flex.children[0].children[0].textContent=answer.relevance_percentage+"%";
         right_flex.children[0].children[0].textContent=answer.content;
         right_flex.children[1].children[1].textContent=answer.author;
       
         answers_container.appendChild(answer_card)
     })
 
-    console.log(answers)
+    // console.log(answers)
 }
 function loadQuestion(result) {
     const questions = result
@@ -71,6 +72,12 @@ function loadQuestion(result) {
         const right_flex= question_card.children[1];
 
         left_flex.children[1].children[0].textContent=question.tags[0].name;
+        left_flex.children[0].children[0].textContent=question.most_relevance_percentage+"%";
+
+        if(question.total_answers > 1)
+            left_flex.children[2].children[0].textContent=question.total_answers+" Answers";
+        else
+            left_flex.children[2].children[0].textContent=question.total_answers+" Answer";
 
         right_flex.children[0].children[0].textContent=question.title;
         right_flex.children[1].children[0].textContent=question.des;
@@ -94,7 +101,7 @@ post_answer_btn.addEventListener("click",()=>{
             question_id:questionID,
             your_answer:document.getElementById("your_answer").value,
         }),
-        success:(data)=>{
+        success:()=>{
             window.location.href="/questions/view/"+questionID
         // console.log("post question successfully "+data)
          },

@@ -12,6 +12,10 @@ var answerSchema=new mongoose.Schema({
     author:{
         type:String,
         required:true
+    },
+    relevance_percentage:{
+        type:Number,
+        require:true
     }
 })
 
